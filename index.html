@@ -1,0 +1,164 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saurabh Tiwari | Portfolio</title>
+  <meta name="description" content="Saurabh Tiwari's personal portfolio showcasing AI/ML projects, skills and contact information.">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: #08090d;
+      color: #f5f5f7;
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+    }
+    a { color: inherit; text-decoration: none; }
+    nav {
+      display: flex; justify-content: space-between;
+      align-items: center; padding: 22px 8%;
+      border-bottom: 1px solid #22232d;
+      position: sticky; top: 0; background: #08090dee;
+      backdrop-filter: blur(12px); z-index: 5;
+    }
+    .logo { font-size: 21px; font-weight: bold; }
+    .logo span, .accent { color: #8b7cff; }
+    nav a { margin-left: 22px; color: #c4c4d0; font-size: 14px; }
+    .hero {
+      min-height: 82vh; display: flex; flex-direction: column;
+      justify-content: center; align-items: flex-start;
+      padding: 90px 10%; position: relative; overflow: hidden;
+    }
+    .hero:before {
+      content: ""; position: absolute; width: 320px; height: 320px;
+      background: #715cff22; filter: blur(90px);
+      right: 10%; top: 18%; pointer-events: none;
+    }
+    .tag {
+      border: 1px solid #39334f; color: #b9adff;
+      padding: 7px 14px; border-radius: 30px; font-size: 13px;
+      margin-bottom: 24px;
+    }
+    h1 { font-size: clamp(42px, 7vw, 76px); line-height: 1.12; letter-spacing: -2px; }
+    .hero p { color: #aaaab9; max-width: 610px; margin: 22px 0 30px; font-size: 17px; }
+    .buttons { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn {
+      display: inline-block; padding: 12px 22px; border-radius: 9px;
+      background: #8170ff; color: white; font-weight: bold;
+      border: 1px solid #8170ff; transition: .2s;
+    }
+    .btn:hover { transform: translateY(-3px); box-shadow: 0 0 25px #8170ff55; }
+    .btn.secondary { background: transparent; border-color: #393943; }
+    section { padding: 75px 10%; }
+    .section-title { font-size: 32px; margin-bottom: 12px; }
+    .section-desc { color: #aaaab9; margin-bottom: 30px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 18px; }
+    .card {
+      background: linear-gradient(145deg, #14151e, #0d0e14);
+      border: 1px solid #282936; padding: 25px; border-radius: 16px;
+      transition: .25s;
+    }
+    .card:hover { border-color: #8170ff; transform: translateY(-4px); }
+    .card h3 { margin-bottom: 10px; }
+    .card p { color: #aaaab9; font-size: 14px; }
+    .skills { display: flex; flex-wrap: wrap; gap: 12px; }
+    .skills span {
+      background: #151520; border: 1px solid #2c2b40;
+      color: #d4ceff; border-radius: 8px; padding: 9px 15px;
+    }
+    .contact { text-align: center; }
+    footer { text-align: center; border-top: 1px solid #24242e; padding: 25px; color: #888895; font-size: 13px; }
+    @media(max-width:600px) {
+      nav { padding: 16px 5%; }
+      nav a { margin-left: 10px; font-size: 12px; }
+      .hero { padding: 75px 7%; }
+      section { padding: 55px 7%; }
+      h1 { letter-spacing: -1px; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="logo" href="#">ST<span>.</span></a>
+    <div>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="tag">B.Tech CS (AI &amp; ML) · Portfolio</div>
+    <h1>Hi, I'm <span class="accent">Saurabh</span><br>Tiwari.</h1>
+    <p>
+      Aspiring AI/ML Developer passionate about building practical
+      solutions with Python, machine learning and computer vision.
+      Open to job opportunities and freelance projects.
+    </p>
+    <div class="buttons">
+      <a class="btn" href="#projects">Explore My Work ↗</a>
+      <a class="btn secondary" href="#contact">Let's Connect</a>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2 class="section-title">About <span class="accent">Me</span></h2>
+    <p class="section-desc">
+      I'm a Computer Science student specializing in Artificial
+      Intelligence and Machine Learning. I enjoy turning ideas into
+      useful projects and continuously improving my technical skills.
+    </p>
+    <div class="grid">
+      <article class="card">
+        <h3>🎓 Education</h3>
+        <p>B.Tech in Computer Science Engineering — AI &amp; ML specialization.</p>
+      </article>
+      <article class="card">
+        <h3>💡 My Focus</h3>
+        <p>Machine learning, computer vision, Python development and problem solving.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2 class="section-title">Technical <span class="accent">Skills</span></h2>
+    <p class="section-desc">Technologies I have worked with.</p>
+    <div class="skills">
+      <span>Python</span><span>TensorFlow</span><span>OpenCV</span>
+      <span>Machine Learning</span><span>HTML</span><span>CSS</span>
+      <span>Git &amp; GitHub</span><span>Computer Vision</span>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
+    <p class="section-desc">A selection of my development work.</p>
+    <div class="grid">
+      <article class="card">
+        <h3>🌿 Plant Leaf Disease Detector</h3>
+        <p>An AI/ML project focused on identifying plant leaf diseases from images using computer vision.</p>
+      </article>
+      <article class="card">
+        <h3>📄 Mini OCR Scanner</h3>
+        <p>A project exploring image processing and extracting readable text from images.</p>
+      </article>
+      <article class="card">
+        <h3>💻 Personal Portfolio</h3>
+        <p>A responsive personal website to showcase my skills, projects and professional profile.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2 class="section-title">Let's Work <span class="accent">Together</span></h2>
+    <p class="section-desc">Have an opportunity or project in mind? Get in touch.</p>
+    <div class="buttons" style="justify-content:center">
+      <a class="btn" href="https://github.com/saurabhtiwari0001" target="_blank" rel="noopener noreferrer">Visit My GitHub ↗</a>
+      <a class="btn secondary" href="mailto:YOUR_EMAIL@example.com">Email Me</a>
+    </div>
+  </section>
+
+  <footer>© 2026 Saurabh Tiwari
