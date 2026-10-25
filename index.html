@@ -1,96 +1,265 @@
+ यह पूरा code copy करके अपनी HTML file में paste कर दीजिए। `YOUR_EMAIL` और LinkedIn/Facebook/Instagram वाले usernames अपनी जानकारी से बदलें। Resume PDF को `resume.pdf` नाम से इसी HTML file के साथ रखें।
 
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Saurabh Tiwari's portfolio: AI/ML projects, skills, resume, certificates and achievements.">
   <title>Saurabh Tiwari | Portfolio</title>
-  <meta name="description" content="Saurabh Tiwari's personal portfolio showcasing AI/ML projects, skills and contact information.">
+
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       background: #08090d;
       color: #f5f5f7;
-      font-family: Arial, sans-serif;
-      line-height: 1.7;
+      font: 16px/1.7 Arial, sans-serif;
     }
-    a { color: inherit; text-decoration: none; }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
     nav {
-      display: flex; justify-content: space-between;
-      align-items: center; padding: 22px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 8%;
       border-bottom: 1px solid #22232d;
-      position: sticky; top: 0; background: #08090dee;
-      backdrop-filter: blur(12px); z-index: 5;
+      position: sticky;
+      top: 0;
+      background: #08090dee;
+      backdrop-filter: blur(12px);
+      z-index: 5;
     }
-    .logo { font-size: 21px; font-weight: bold; }
-    .logo span, .accent { color: #8b7cff; }
-    nav a { margin-left: 22px; color: #c4c4d0; font-size: 14px; }
+
+    .logo {
+      font-size: 21px;
+      font-weight: bold;
+    }
+
+    .logo span,
+    .accent {
+      color: #8b7cff;
+    }
+
+    .navlinks {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .navlinks a {
+      color: #c4c4d0;
+      font-size: 14px;
+    }
+
     .hero {
-      min-height: 82vh; display: flex; flex-direction: column;
-      justify-content: center; align-items: flex-start;
-      padding: 90px 10%; position: relative; overflow: hidden;
+      min-height: 78vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 80px 10%;
+      position: relative;
+      overflow: hidden;
     }
-    .hero:before {
-      content: ""; position: absolute; width: 320px; height: 320px;
-      background: #715cff22; filter: blur(90px);
-      right: 10%; top: 18%; pointer-events: none;
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 320px;
+      height: 320px;
+      background: #715cff22;
+      filter: blur(90px);
+      right: 10%;
+      top: 18%;
+      pointer-events: none;
     }
+
     .tag {
-      border: 1px solid #39334f; color: #b9adff;
-      padding: 7px 14px; border-radius: 30px; font-size: 13px;
+      border: 1px solid #39334f;
+      color: #b9adff;
+      padding: 7px 14px;
+      border-radius: 30px;
+      font-size: 13px;
       margin-bottom: 24px;
     }
-    h1 { font-size: clamp(42px, 7vw, 76px); line-height: 1.12; letter-spacing: -2px; }
-    .hero p { color: #aaaab9; max-width: 610px; margin: 22px 0 30px; font-size: 17px; }
-    .buttons { display: flex; gap: 14px; flex-wrap: wrap; }
-    .btn {
-      display: inline-block; padding: 12px 22px; border-radius: 9px;
-      background: #8170ff; color: white; font-weight: bold;
-      border: 1px solid #8170ff; transition: .2s;
+
+    h1 {
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 1.12;
+      letter-spacing: -2px;
     }
-    .btn:hover { transform: translateY(-3px); box-shadow: 0 0 25px #8170ff55; }
-    .btn.secondary { background: transparent; border-color: #393943; }
-    section { padding: 75px 10%; }
-    .section-title { font-size: 32px; margin-bottom: 12px; }
-    .section-desc { color: #aaaab9; margin-bottom: 30px; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 18px; }
+
+    .hero p {
+      color: #aaaab9;
+      max-width: 650px;
+      margin: 22px 0 30px;
+      font-size: 17px;
+    }
+
+    .buttons,
+    .socials {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 11px 19px;
+      border-radius: 9px;
+      background: #8170ff;
+      color: white;
+      font-weight: bold;
+      border: 1px solid #8170ff;
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 25px #8170ff55;
+    }
+
+    .btn.secondary {
+      background: transparent;
+      border-color: #393943;
+    }
+
+    section {
+      padding: 68px 10%;
+      scroll-margin-top: 76px;
+    }
+
+    .section-title {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .section-desc {
+      color: #aaaab9;
+      margin-bottom: 26px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 18px;
+    }
+
     .card {
       background: linear-gradient(145deg, #14151e, #0d0e14);
-      border: 1px solid #282936; padding: 25px; border-radius: 16px;
-      transition: .25s;
+      border: 1px solid #282936;
+      padding: 23px;
+      border-radius: 16px;
+      transition: 0.25s;
     }
-    .card:hover { border-color: #8170ff; transform: translateY(-4px); }
-    .card h3 { margin-bottom: 10px; }
-    .card p { color: #aaaab9; font-size: 14px; }
-    .skills { display: flex; flex-wrap: wrap; gap: 12px; }
+
+    .card:hover {
+      border-color: #8170ff;
+      transform: translateY(-3px);
+    }
+
+    .card h3 {
+      margin-bottom: 9px;
+    }
+
+    .card p {
+      color: #aaaab9;
+      font-size: 14px;
+    }
+
+    .meta {
+      color: #b9adff !important;
+      font-size: 13px !important;
+      margin: 5px 0 10px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
     .skills span {
-      background: #151520; border: 1px solid #2c2b40;
-      color: #d4ceff; border-radius: 8px; padding: 9px 15px;
+      background: #151520;
+      border: 1px solid #2c2b40;
+      color: #d4ceff;
+      border-radius: 8px;
+      padding: 8px 14px;
     }
-    .contact { text-align: center; }
-    footer { text-align: center; border-top: 1px solid #24242e; padding: 25px; color: #888895; font-size: 13px; }
-    @media(max-width:600px) {
-      nav { padding: 16px 5%; }
-      nav a { margin-left: 10px; font-size: 12px; }
-      .hero { padding: 75px 7%; }
-      section { padding: 55px 7%; }
-      h1 { letter-spacing: -1px; }
+
+    .contact {
+      text-align: center;
+    }
+
+    .socials {
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    footer {
+      text-align: center;
+      border-top: 1px solid #24242e;
+      padding: 25px;
+      color: #888895;
+      font-size: 13px;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        align-items: flex-start;
+        gap: 12px;
+        flex-direction: column;
+        padding: 15px 5%;
+      }
+
+      .navlinks {
+        gap: 12px;
+      }
+
+      .hero {
+        padding: 65px 7%;
+      }
+
+      section {
+        padding: 52px 7%;
+      }
+
+      h1 {
+        letter-spacing: -1px;
+      }
     }
   </style>
 </head>
+
 <body>
   <nav>
-    <a class="logo" href="#">ST<span>.</span></a>
-    <div>
+    <a class="logo" href="#top">ST<span>.</span></a>
+    <div class="navlinks">
       <a href="#about">About</a>
+      <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
+      <a href="#resume">Resume</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#achievements">Achievements</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
 
-  <header class="hero">
+  <header class="hero" id="top">
     <div class="tag">B.Tech CS (AI &amp; ML) · Portfolio</div>
     <h1>Hi, I'm <span class="accent">Saurabh</span><br>Tiwari.</h1>
     <p>
@@ -98,8 +267,10 @@
       solutions with Python, machine learning and computer vision.
       Open to job opportunities and freelance projects.
     </p>
+
     <div class="buttons">
       <a class="btn" href="#projects">Explore My Work ↗</a>
+      <a class="btn secondary" href="resume.pdf" target="_blank" rel="noopener noreferrer">View Resume ↗</a>
       <a class="btn secondary" href="#contact">Let's Connect</a>
     </div>
   </header>
@@ -107,15 +278,20 @@
   <section id="about">
     <h2 class="section-title">About <span class="accent">Me</span></h2>
     <p class="section-desc">
-      I'm a Computer Science student specializing in Artificial
-      Intelligence and Machine Learning. I enjoy turning ideas into
-      useful projects and continuously improving my technical skills.
+      I'm a Computer Science student specializing in Artificial Intelligence
+      and Machine Learning. I enjoy turning ideas into useful projects and
+      continuously improving my technical skills.
     </p>
+
     <div class="grid">
       <article class="card">
         <h3>🎓 Education</h3>
-        <p>B.Tech in Computer Science Engineering — AI &amp; ML specialization.</p>
+        <p>
+          B.Tech in Computer Science Engineering — AI &amp; ML specialization.
+          Add your college name, city and expected graduation year here.
+        </p>
       </article>
+
       <article class="card">
         <h3>💡 My Focus</h3>
         <p>Machine learning, computer vision, Python development and problem solving.</p>
@@ -126,28 +302,126 @@
   <section id="skills">
     <h2 class="section-title">Technical <span class="accent">Skills</span></h2>
     <p class="section-desc">Technologies I have worked with.</p>
+
     <div class="skills">
-      <span>Python</span><span>TensorFlow</span><span>OpenCV</span>
-      <span>Machine Learning</span><span>HTML</span><span>CSS</span>
-      <span>Git &amp; GitHub</span><span>Computer Vision</span>
+      <span>Python</span>
+      <span>TensorFlow</span>
+      <span>OpenCV</span>
+      <span>Machine Learning</span>
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>Git &amp; GitHub</span>
+      <span>Computer Vision</span>
     </div>
   </section>
 
   <section id="projects">
     <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
-    <p class="section-desc">A selection of my development work.</p>
+    <p class="section-desc">Add each project's GitHub or live demo link.</p>
+
     <div class="grid">
       <article class="card">
         <h3>🌿 Plant Leaf Disease Detector</h3>
         <p>An AI/ML project focused on identifying plant leaf diseases from images using computer vision.</p>
+        <p class="meta">
+          <a href="https://github.com/saurabhtiwari0001" target="_blank" rel="noopener noreferrer">
+            Add project repository ↗
+          </a>
+        </p>
       </article>
+
       <article class="card">
         <h3>📄 Mini OCR Scanner</h3>
         <p>A project exploring image processing and extracting readable text from images.</p>
+        <p class="meta">
+          <a href="https://github.com/saurabhtiwari0001" target="_blank" rel="noopener noreferrer">
+            Add project repository ↗
+          </a>
+        </p>
       </article>
+
       <article class="card">
         <h3>💻 Personal Portfolio</h3>
         <p>A responsive personal website to showcase my skills, projects and professional profile.</p>
+        <p class="meta">Built with HTML and CSS</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="resume">
+    <h2 class="section-title">My <span class="accent">Resume</span></h2>
+    <p class="section-desc">Download or view my latest resume.</p>
+
+    <div class="grid">
+      <article class="card">
+        <h3>📄 Resume / CV</h3>
+        <p>Save your resume PDF as <strong>resume.pdf</strong> in the same folder as this HTML file.</p>
+        <p style="margin-top: 16px">
+          <a class="btn" href="resume.pdf" target="_blank" rel="noopener noreferrer">Open Resume ↗</a>
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Quick Profile</h3>
+        <p>
+          Education: add degree, college and year<br>
+          Location: add your city<br>
+          Career interest: AI/ML Developer<br>
+          Email: update the sample email below
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section id="certificates">
+    <h2 class="section-title">Certificates <span class="accent">&amp; Courses</span></h2>
+    <p class="section-desc">Replace these examples with your real certificates and links.</p>
+
+    <div class="grid">
+      <article class="card">
+        <h3>🏅 Certificate title</h3>
+        <p class="meta">Issuing organization · Month Year</p>
+        <p>Briefly describe the course, credential or skills covered.</p>
+        <p class="meta"><a href="https://example.com" target="_blank" rel="noopener noreferrer">Add certificate link ↗</a></p>
+      </article>
+
+      <article class="card">
+        <h3>🏅 Certificate title</h3>
+        <p class="meta">Issuing organization · Month Year</p>
+        <p>Briefly describe the course, credential or skills covered.</p>
+        <p class="meta"><a href="https://example.com" target="_blank" rel="noopener noreferrer">Add certificate link ↗</a></p>
+      </article>
+
+      <article class="card">
+        <h3>🏅 Certificate title</h3>
+        <p class="meta">Issuing organization · Month Year</p>
+        <p>Briefly describe the course, credential or skills covered.</p>
+        <p class="meta"><a href="https://example.com" target="_blank" rel="noopener noreferrer">Add certificate link ↗</a></p>
+      </article>
+    </div>
+  </section>
+
+  <section id="achievements">
+    <h2 class="section-title">Achievements <span class="accent">&amp; Highlights</span></h2>
+    <p class="section-desc">Add awards, hackathons, leadership, publications, volunteering or milestones.</p>
+
+    <div class="grid">
+      <article class="card">
+        <h3>🏆 Achievement / Award</h3>
+        <p class="meta">Event or organization · Year</p>
+        <p>What you achieved and why it matters. Add a result or measurable detail where possible.</p>
+      </article>
+
+      <article class="card">
+        <h3>🚀 Hackathon / Competition</h3>
+        <p class="meta">Event name · Year</p>
+        <p>Your role, project and outcome. Include a link to the project or event if available.</p>
+      </article>
+
+      <article class="card">
+        <h3>🌟 Leadership / Community</h3>
+        <p class="meta">Organization · Dates</p>
+        <p>Describe a club role, volunteering, mentoring or community contribution.</p>
       </article>
     </div>
   </section>
@@ -155,10 +429,20 @@
   <section id="contact" class="contact">
     <h2 class="section-title">Let's Work <span class="accent">Together</span></h2>
     <p class="section-desc">Have an opportunity or project in mind? Get in touch.</p>
-    <div class="buttons" style="justify-content:center">
-      <a class="btn" href="https://github.com/saurabhtiwari0001" target="_blank" rel="noopener noreferrer">Visit My GitHub ↗</a>
-      <a class="btn secondary" href="mailto:YOUR_EMAIL@example.com">Email Me</a>
+
+    <div class="buttons" style="justify-content: center">
+      <a class="btn" href="mailto:YOUR_EMAIL@example.com">Email Me</a>
+      <a class="btn secondary" href="https://github.com/saurabhtiwari0001" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+    </div>
+
+    <div class="socials">
+      <a class="btn secondary" href="https://www.linkedin.com/in/YOUR-LINKEDIN-USERNAME/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      <a class="btn secondary" href="https://www.facebook.com/YOUR-FACEBOOK-USERNAME" target="_blank" rel="noopener noreferrer">Facebook ↗</a>
+      <a class="btn secondary" href="https://www.instagram.com/YOUR-INSTAGRAM-USERNAME/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
     </div>
   </section>
 
-  <footer>© 2026 Saurabh Tiwari
+  <footer>© 2026 Saurabh Tiwari · Built with HTML &amp; CSS</footer>
+</body>
+</html>
+```
