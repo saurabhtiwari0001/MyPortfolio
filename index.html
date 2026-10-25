@@ -1,446 +1,100 @@
-
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Saurabh Tiwari's portfolio: AI/ML projects, skills, resume, certificates and achievements.">
+  <meta name="description" content="Saurabh Tiwari's portfolio">
   <title>Saurabh Tiwari | Portfolio</title>
-
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background: #08090d;
-      color: #f5f5f7;
-      font: 16px/1.7 Arial, sans-serif;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 18px 8%;
-      border-bottom: 1px solid #22232d;
-      position: sticky;
-      top: 0;
-      background: #08090dee;
-      backdrop-filter: blur(12px);
-      z-index: 5;
-    }
-
-    .logo {
-      font-size: 21px;
-      font-weight: bold;
-    }
-
-    .logo span,
-    .accent {
-      color: #8b7cff;
-    }
-
-    .navlinks {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
-
-    .navlinks a {
-      color: #c4c4d0;
-      font-size: 14px;
-    }
-
-    .hero {
-      min-height: 78vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      padding: 80px 10%;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      width: 320px;
-      height: 320px;
-      background: #715cff22;
-      filter: blur(90px);
-      right: 10%;
-      top: 18%;
-      pointer-events: none;
-    }
-
-    .tag {
-      border: 1px solid #39334f;
-      color: #b9adff;
-      padding: 7px 14px;
-      border-radius: 30px;
-      font-size: 13px;
-      margin-bottom: 24px;
-    }
-
-    h1 {
-      font-size: clamp(42px, 7vw, 76px);
-      line-height: 1.12;
-      letter-spacing: -2px;
-    }
-
-    .hero p {
-      color: #aaaab9;
-      max-width: 650px;
-      margin: 22px 0 30px;
-      font-size: 17px;
-    }
-
-    .buttons,
-    .socials {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 11px 19px;
-      border-radius: 9px;
-      background: #8170ff;
-      color: white;
-      font-weight: bold;
-      border: 1px solid #8170ff;
-      transition: 0.2s;
-    }
-
-    .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 0 25px #8170ff55;
-    }
-
-    .btn.secondary {
-      background: transparent;
-      border-color: #393943;
-    }
-
-    section {
-      padding: 68px 10%;
-      scroll-margin-top: 76px;
-    }
-
-    .section-title {
-      font-size: 32px;
-      margin-bottom: 10px;
-    }
-
-    .section-desc {
-      color: #aaaab9;
-      margin-bottom: 26px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 18px;
-    }
-
-    .card {
-      background: linear-gradient(145deg, #14151e, #0d0e14);
-      border: 1px solid #282936;
-      padding: 23px;
-      border-radius: 16px;
-      transition: 0.25s;
-    }
-
-    .card:hover {
-      border-color: #8170ff;
-      transform: translateY(-3px);
-    }
-
-    .card h3 {
-      margin-bottom: 9px;
-    }
-
-    .card p {
-      color: #aaaab9;
-      font-size: 14px;
-    }
-
-    .meta {
-      color: #b9adff !important;
-      font-size: 13px !important;
-      margin: 5px 0 10px;
-    }
-
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .skills span {
-      background: #151520;
-      border: 1px solid #2c2b40;
-      color: #d4ceff;
-      border-radius: 8px;
-      padding: 8px 14px;
-    }
-
-    .contact {
-      text-align: center;
-    }
-
-    .socials {
-      justify-content: center;
-      margin-top: 20px;
-    }
-
-    footer {
-      text-align: center;
-      border-top: 1px solid #24242e;
-      padding: 25px;
-      color: #888895;
-      font-size: 13px;
-    }
-
-    @media (max-width: 700px) {
-      nav {
-        align-items: flex-start;
-        gap: 12px;
-        flex-direction: column;
-        padding: 15px 5%;
-      }
-
-      .navlinks {
-        gap: 12px;
-      }
-
-      .hero {
-        padding: 65px 7%;
-      }
-
-      section {
-        padding: 52px 7%;
-      }
-
-      h1 {
-        letter-spacing: -1px;
-      }
-    }
+    :root{--bg:#090d12;--panel:#111922;--panel2:#151f29;--text:#eef4f2;--muted:#a1b0b6;--accent:#72efc2;--line:#26343b;--max:1120px}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{font:16px/1.7 Inter,Segoe UI,Arial,sans-serif;background:radial-gradient(ellipse at 75% 0%,#12352f 0,transparent 34%),var(--bg);color:var(--text)}
+    a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),90%);margin:auto}
+    .nav{position:sticky;top:0;z-index:10;background:#090d12eF;border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}
+    .navinner{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{font-weight:800;font-size:1.2rem;letter-spacing:.02em}.brand span,.accent{color:var(--accent)}
+    .links{display:flex;gap:25px;align-items:center;color:var(--muted);font-size:.92rem}.links a:hover{color:var(--accent)}
+    .hero{min-height:590px;display:grid;grid-template-columns:1.25fr .75fr;align-items:center;gap:50px;padding:82px 0 70px}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--accent);font-size:.84rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700}
+    .eyebrow:before{content:"";width:24px;height:1px;background:var(--accent)}
+    h1{font-size:clamp(3.2rem,7vw,6.3rem);line-height:.98;letter-spacing:-.065em;margin:22px 0}
+    .hero p,.section-intro{color:var(--muted);max-width:620px;font-size:1.08rem}
+    .actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:30px}
+    .button{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 19px;border-radius:8px;background:var(--accent);color:#092019;font-weight:800;border:1px solid var(--accent);transition:.2s}
+    .button:hover{transform:translateY(-2px);box-shadow:0 10px 30px #72efc226}.button.ghost{background:transparent;color:var(--text);border-color:var(--line)}
+    .portrait-wrap{display:grid;place-items:center;position:relative;min-height:360px}
+    .portrait{width:min(320px,76vw);aspect-ratio:1;border-radius:50%;padding:10px;background:linear-gradient(145deg,var(--accent),#297c88 55%,#202738);box-shadow:0 0 80px #72efc222;position:relative}
+    .portrait-inner{width:100%;height:100%;border-radius:50%;overflow:hidden;background:linear-gradient(145deg,#1b2e33,#111923);display:grid;place-items:center}
+    .portrait img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:50%}
+    .initials{font-size:5rem;font-weight:800;color:var(--accent);letter-spacing:-.08em}
+    .orbit{position:absolute;width:min(370px,88vw);aspect-ratio:1;border:1px dashed #72efc255;border-radius:50%;animation:spin 35s linear infinite}
+    .orbit:after{content:"✦";color:var(--accent);position:absolute;top:12%;right:13%;font-size:1.4rem}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    section{padding:82px 0;border-top:1px solid #26343b88}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:32px}
+    h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.045em;line-height:1.15}
+    .section-intro{font-size:.98rem;margin-top:12px}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .panel,.project{background:linear-gradient(145deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:14px;padding:26px}
+    .panel p{color:var(--muted)}.panel h3{font-size:1.05rem;margin-bottom:9px}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+    .stat{padding:17px;border-radius:10px;background:#0c1319;border:1px solid var(--line)}.stat strong{display:block;color:var(--accent);font-size:1.25rem}.stat span{color:var(--muted);font-size:.82rem}
+    .skills{display:flex;flex-wrap:wrap;gap:11px}.chip{border:1px solid #315149;background:#12231f;color:#dff8ef;padding:9px 14px;border-radius:99px;font-size:.93rem}
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .project{min-height:235px;display:flex;flex-direction:column;justify-content:space-between;transition:.2s}.project:hover{transform:translateY(-4px);border-color:#72efc288}
+    .project-top{display:flex;justify-content:space-between;align-items:center;color:var(--accent);font-size:.85rem}.project h3{font-size:1.35rem;margin:20px 0 8px}.project p{color:var(--muted)}.project a{color:var(--accent);font-weight:700;margin-top:18px;display:inline-block}
+    .contact-box{display:flex;justify-content:space-between;align-items:center;gap:30px;padding:34px;border-radius:16px;background:linear-gradient(120deg,#13352d,#111922 72%);border:1px solid #315149}
+    .contact-box p{color:var(--muted);margin-top:9px;max-width:600px}
+    footer{padding:27px 0;color:var(--muted);font-size:.88rem}.footer-inner{display:flex;justify-content:space-between;gap:20px}
+    @media(max-width:760px){.links{gap:13px;font-size:.8rem}.hero{grid-template-columns:1fr;text-align:center;gap:25px;padding-top:60px}.hero p{margin:auto}.eyebrow{justify-content:center}.actions{justify-content:center}.portrait-wrap{min-height:310px;grid-row:1}.portrait{width:240px}.orbit{width:280px}.section-head{display:block}.about-grid,.projects{grid-template-columns:1fr}.contact-box{align-items:flex-start;flex-direction:column}}
+    @media(max-width:480px){.navinner{height:auto;min-height:66px;align-items:flex-start;flex-direction:column;padding:12px 0}.links{width:100%;overflow-x:auto;padding-bottom:5px}.links a{white-space:nowrap}.hero{padding-top:42px}section{padding:62px 0}.stats{grid-template-columns:1fr}.footer-inner{flex-direction:column}}
   </style>
 </head>
-
 <body>
-  <nav>
-    <a class="logo" href="#top">ST<span>.</span></a>
-    <div class="navlinks">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#resume">Resume</a>
-      <a href="#certificates">Certificates</a>
-      <a href="#achievements">Achievements</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
-
-  <header class="hero" id="top">
-    <div class="tag">B.Tech CS (AI &amp; ML) · Portfolio</div>
-    <h1>Hi, I'm <span class="accent">Saurabh</span><br>Tiwari.</h1>
-    <p>
-      Aspiring AI/ML Developer passionate about building practical
-      solutions with Python, machine learning and computer vision.
-      Open to job opportunities and freelance projects.
-    </p>
-
-    <div class="buttons">
-      <a class="btn" href="#projects">Explore My Work ↗</a>
-      <a class="btn secondary" href="resume.pdf" target="_blank" rel="noopener noreferrer">View Resume ↗</a>
-      <a class="btn secondary" href="#contact">Let's Connect</a>
+  <header class="nav">
+    <div class="wrap navinner">
+      <a class="brand" href="#top">ST<span>.</span></a>
+      <nav class="links" aria-label="Main navigation">
+        <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+      </nav>
     </div>
   </header>
-
-  <section id="about">
-    <h2 class="section-title">About <span class="accent">Me</span></h2>
-    <p class="section-desc">
-      I'm a Computer Science student specializing in Artificial Intelligence
-      and Machine Learning. I enjoy turning ideas into useful projects and
-      continuously improving my technical skills.
-    </p>
-
-    <div class="grid">
-      <article class="card">
-        <h3>🎓 Education</h3>
-        <p>
-          B.Tech in Computer Science Engineering — AI &amp; ML specialization.
-          Add your college name, city and expected graduation year here.
-        </p>
-      </article>
-
-      <article class="card">
-        <h3>💡 My Focus</h3>
-        <p>Machine learning, computer vision, Python development and problem solving.</p>
-      </article>
+  <main id="top" class="wrap">
+    <div class="hero">
+      <div>
+        <div class="eyebrow">Computer Science · AI &amp; ML</div>
+        <h1>Hi, I'm<br><span class="accent">Saurabh</span><br>Tiwari.</h1>
+        <p>I enjoy learning new technology and turning ideas into useful projects. Explore my skills, projects, and what I'm working toward.</p>
+        <div class="actions"><a class="button" href="#projects">Explore my work <span>↗</span></a><a class="button ghost" href="#contact">Let's connect</a></div>
+      </div>
+      <div class="portrait-wrap" aria-label="Profile photo area">
+        <div class="orbit"></div>
+        <div class="portrait"><div class="portrait-inner"><span class="initials">ST</span><img src="profile.jpg" alt="Saurabh Tiwari" onerror="this.style.display='none'"></div></div>
+      </div>
     </div>
-  </section>
-
-  <section id="skills">
-    <h2 class="section-title">Technical <span class="accent">Skills</span></h2>
-    <p class="section-desc">Technologies I have worked with.</p>
-
-    <div class="skills">
-      <span>Python</span>
-      <span>TensorFlow</span>
-      <span>OpenCV</span>
-      <span>Machine Learning</span>
-      <span>HTML</span>
-      <span>CSS</span>
-      <span>Git &amp; GitHub</span>
-      <span>Computer Vision</span>
-    </div>
-  </section>
-
-  <section id="projects">
-    <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
-    <p class="section-desc">Add each project's GitHub or live demo link.</p>
-
-    <div class="grid">
-      <article class="card">
-        <h3>🌿 Plant Leaf Disease Detector</h3>
-        <p>An AI/ML project focused on identifying plant leaf diseases from images using computer vision.</p>
-        <p class="meta">
-          <a href="https://github.com/saurabhtiwari0001" target="_blank" rel="noopener noreferrer">
-            Add project repository ↗
-          </a>
-        </p>
-      </article>
-
-      <article class="card">
-        <h3>📄 Mini OCR Scanner</h3>
-        <p>A project exploring image processing and extracting readable text from images.</p>
-        <p class="meta">
-          <a href="https://github.com/saurabhtiwari0001" target="_blank" rel="noopener noreferrer">
-            Add project repository ↗
-          </a>
-        </p>
-      </article>
-
-      <article class="card">
-        <h3>💻 Personal Portfolio</h3>
-        <p>A responsive personal website to showcase my skills, projects and professional profile.</p>
-        <p class="meta">Built with HTML and CSS</p>
-      </article>
-    </div>
-  </section>
-
-  <section id="resume">
-    <h2 class="section-title">My <span class="accent">Resume</span></h2>
-    <p class="section-desc">Download or view my latest resume.</p>
-
-    <div class="grid">
-      <article class="card">
-        <h3>📄 Resume / CV</h3>
-        <p>Save your resume PDF as <strong>resume.pdf</strong> in the same folder as this HTML file.</p>
-        <p style="margin-top: 16px">
-          <a class="btn" href="resume.pdf" target="_blank" rel="noopener noreferrer">Open Resume ↗</a>
-        </p>
-      </article>
-
-      <article class="card">
-        <h3>Quick Profile</h3>
-        <p>
-          Education: add degree, college and year<br>
-          Location: add your city<br>
-          Career interest: AI/ML Developer<br>
-          Email: update the sample email below
-        </p>
-      </article>
-    </div>
-  </section>
-
-  <section id="certificates">
-    <h2 class="section-title">Certificates <span class="accent">&amp; Courses</span></h2>
-    <p class="section-desc">Replace these examples with your real certificates and links.</p>
-
-    <div class="grid">
-      <article class="card">
-        <h3>🏅 Certificate title</h3>
-        <p class="meta">Issuing organization · Month Year</p>
-        <p>Briefly describe the course, credential or skills covered.</p>
-        <p class="meta"><a href="https://example.com" target="_blank" rel="noopener noreferrer">Add certificate link ↗</a></p>
-      </article>
-
-      <article class="card">
-        <h3>🏅 Certificate title</h3>
-        <p class="meta">Issuing organization · Month Year</p>
-        <p>Briefly describe the course, credential or skills covered.</p>
-        <p class="meta"><a href="https://example.com" target="_blank" rel="noopener noreferrer">Add certificate link ↗</a></p>
-      </article>
-
-      <article class="card">
-        <h3>🏅 Certificate title</h3>
-        <p class="meta">Issuing organization · Month Year</p>
-        <p>Briefly describe the course, credential or skills covered.</p>
-        <p class="meta"><a href="https://example.com" target="_blank" rel="noopener noreferrer">Add certificate link ↗</a></p>
-      </article>
-    </div>
-  </section>
-
-  <section id="achievements">
-    <h2 class="section-title">Achievements <span class="accent">&amp; Highlights</span></h2>
-    <p class="section-desc">Add awards, hackathons, leadership, publications, volunteering or milestones.</p>
-
-    <div class="grid">
-      <article class="card">
-        <h3>🏆 Achievement / Award</h3>
-        <p class="meta">Event or organization · Year</p>
-        <p>What you achieved and why it matters. Add a result or measurable detail where possible.</p>
-      </article>
-
-      <article class="card">
-        <h3>🚀 Hackathon / Competition</h3>
-        <p class="meta">Event name · Year</p>
-        <p>Your role, project and outcome. Include a link to the project or event if available.</p>
-      </article>
-
-      <article class="card">
-        <h3>🌟 Leadership / Community</h3>
-        <p class="meta">Organization · Dates</p>
-        <p>Describe a club role, volunteering, mentoring or community contribution.</p>
-      </article>
-    </div>
-  </section>
-
-  <section id="contact" class="contact">
-    <h2 class="section-title">Let's Work <span class="accent">Together</span></h2>
-    <p class="section-desc">Have an opportunity or project in mind? Get in touch.</p>
-
-    <div class="buttons" style="justify-content: center">
-      <a class="btn" href="mailto:YOUR_EMAIL@example.com">Email Me</a>
-      <a class="btn secondary" href="https://github.com/saurabhtiwari0001" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-    </div>
-
-    <div class="socials">
-      <a class="btn secondary" href="https://www.linkedin.com/in/YOUR-LINKEDIN-USERNAME/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-      <a class="btn secondary" href="https://www.facebook.com/YOUR-FACEBOOK-USERNAME" target="_blank" rel="noopener noreferrer">Facebook ↗</a>
-      <a class="btn secondary" href="https://www.instagram.com/YOUR-INSTAGRAM-USERNAME/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
-    </div>
-  </section>
-
-  <footer>© 2026 Saurabh Tiwari · Built with HTML &amp; CSS</footer>
+    <section id="about">
+      <div class="section-head"><div><div class="eyebrow">A little about me</div><h2>Curious mind.<br><span class="accent">Builder's mindset.</span></h2></div></div>
+      <div class="about-grid">
+        <article class="panel"><h3>My journey</h3><p>I'm a Computer Science student interested in Artificial Intelligence and Machine Learning. I enjoy building practical projects, exploring how things work, and improving a little with every step.</p></article>
+        <article class="panel"><h3>What I'm focused on</h3><p>Growing my programming skills, learning modern tools, and creating projects that solve real problems. I'm always open to learning and collaborating.</p></article>
+      </div>
+    </section>
+    <section id="skills">
+      <div class="section-head"><div><div class="eyebrow">Tools I use</div><h2>Technical <span class="accent">skills</span></h2><p class="section-intro">A growing toolkit for turning ideas into working projects.</p></div></div>
+      <div class="skills"><span class="chip">Python</span><span class="chip">Machine Learning</span><span class="chip">TensorFlow</span><span class="chip">OpenCV</span><span class="chip">HTML &amp; CSS</span><span class="chip">Git &amp; GitHub</span></div>
+    </section>
+    <section id="projects">
+      <div class="section-head"><div><div class="eyebrow">Selected work</div><h2>Featured <span class="accent">projects</span></h2><p class="section-intro">A few ideas brought to life through code.</p></div></div>
+      <div class="projects">
+        <article class="project"><div><div class="project-top"><span>01 / COMPUTER VISION</span><span>✦</span></div><h3>Plant Leaf Disease Detector</h3><p>An AI/ML project focused on identifying plant leaf diseases from images using computer vision.</p></div><a href="https://github.com/saurabhtiwari0001" target="_blank" rel="noopener noreferrer">Explore on GitHub ↗</a></article>
+        <article class="project"><div><div class="project-top"><span>02 / MORE COMING</span><span>✦</span></div><h3>More projects soon</h3><p>I'm working on new ideas. Check back soon to see what I build next.</p></div><a href="https://github.com/saurabhtiwari0001" target="_blank" rel="noopener noreferrer">Visit my GitHub ↗</a></article>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="contact-box"><div><div class="eyebrow">Have an idea?</div><h2>Let's build something <span class="accent">useful.</span></h2><p>I'm always happy to learn, connect, and explore new opportunities.</p></div><a class="button" href="https://github.com/saurabhtiwari0001" target="_blank" rel="noopener noreferrer">Find me on GitHub ↗</a></div>
+    </section>
+  </main>
+  <footer><div class="wrap footer-inner"><span>© 2026 Saurabh Tiwari</span><span>Designed with care · Built with HTML &amp; CSS</span></div></footer>
 </body>
 </html>
-```
